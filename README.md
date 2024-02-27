@@ -1,4 +1,4 @@
-#Random Number Guessing Game
+# Random Number Guessing Game
 
 This repository contains a simple yet fun game built with HTML, CSS, and JavaScript. The game generates a random number, and your task is to guess it!
 
