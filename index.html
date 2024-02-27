@@ -24,16 +24,14 @@
     attempts++;
     if (guess < numberToGuess) {
         document.getElementById('message').textContent = "Too low! Try again.";
-      } 
-      else if (guess > numberToGuess) {
+    } else if (guess > numberToGuess) {
         document.getElementById('message').textContent = "Too high! Try again.";
-      }   
-      else if(guess == numberToGuess) {
-          document.getElementById('message').textContent = "Congratulations! You found the number in " + attempts + " attempts.";
-          resetGame();
-      }
-      document.getElementById('attempts').textContent = "Number of attempts: " + attempts;
-      guessInput.value = '';  // Reset the input field
+    } else {
+        // Redirect the user to the congratulations page
+        window.location.href = "congratulations.html";
+    }
+    document.getElementById('attempts').textContent = "Number of attempts: " + attempts;
+    guessInput.value = '';  // Reset the input field
     }
     function resetGame() {
       numberToGuess = Math.floor(Math.random() * 100) + 1;
