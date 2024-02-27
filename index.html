@@ -19,23 +19,22 @@
     var attempts = 0;
 
     function checkGuess() {
-      var guess = document.getElementById('guess').value;
-      attempts++;
-      if (guess < numberToGuess) {
+    var guessInput = document.getElementById('guess');
+    var guess = guessInput.value;
+    attempts++;
+    if (guess < numberToGuess) {
         document.getElementById('message').textContent = "Too low! Try again.";
-        document.getElementById('message').classList.add('lowlight');
       } 
       else if (guess > numberToGuess) {
         document.getElementById('message').textContent = "Too high! Try again.";
-        document.getElementById('message').classList.add('highlight');
-      } 
-      else {
-        document.getElementById('message').classList.remove('highlight', 'lowlight');
-        // existing code
+      }   
+      else if(guess == numberToGuess) {
+          document.getElementById('message').textContent = "Congratulations! You found the number in " + attempts + " attempts.";
+          resetGame();
       }
       document.getElementById('attempts').textContent = "Number of attempts: " + attempts;
+      guessInput.value = '';  // Reset the input field
     }
-
     function resetGame() {
       numberToGuess = Math.floor(Math.random() * 100) + 1;
       attempts = 0;
