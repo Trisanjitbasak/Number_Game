@@ -1,3 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -193,3 +206,31 @@ button:active {
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Rest of your CSS */
+
+/* Media query for screens smaller than 600px (typical breakpoint for mobile devices) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;  /* Make the container take up the full width on small screens */
+    }
+
+    #guess-form {
+        width: 90%;  /* Reduce the width of the form to create some margin on the sides */
+    }
+}
+
+  
