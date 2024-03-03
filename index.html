@@ -6,8 +6,8 @@
 </head>
 <body>
   <h1>Number Guessing Game</h1>
-  <p id="message"></p>
-  <label for="guess">Guess a number between 1 and 100:</label><br>
+  <p id="message">
+  <label for="guess"><span class="highlight">Guess a number between 1 and 100:</span></label><br></p>
   <input type="number" id="guess" min="1" max="100"><br>
   <div class="button-container">
     <button onclick="checkGuess()" id="submit-button">Submit</button>
@@ -27,12 +27,12 @@
     } else if (guess > numberToGuess) {
         document.getElementById('message').textContent = "Too high! Try again.";
     } else {
-        // Redirect the user to the congratulations page
-        window.location.href = "congratulations.html";
+        // Redirect the user to the congratulations page with the number of attempts as a URL parameter
+        window.location.href = "congratulations.html?attempts=" + attempts;
     }
     document.getElementById('attempts').textContent = "Number of attempts: " + attempts;
     guessInput.value = '';  // Reset the input field
-    }
+}
     function resetGame() {
       numberToGuess = Math.floor(Math.random() * 100) + 1;
       attempts = 0;
