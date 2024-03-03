@@ -1,4 +1,10 @@
 body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
@@ -9,6 +15,13 @@ body {
   width: 80%;
   margin: auto;
   overflow: hidden;
+}
+
+#message {
+  color: white;
+  padding: 5px;
+  font-size: 1.2em;
+  border-radius: 5px;
 }
 
 @keyframes fadeIn {
@@ -35,20 +48,25 @@ body {
 }
 
 h1 {
-    color: #3d3d3d;
+    color: #ff0000;
     text-align: center;
     padding: 20px 0;
     font-size: 2em;
     animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
 }
 
+#message .highlight {
+  color: #ffffff; /* Change this to the bright color you want */
+  letter-spacing: 1px;
+}
+
 #guess-form {
-    background: #fff;
+    color: #fff;
     margin: 20px auto;
     padding: 30px;
     width: 80%;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 5px #ffffff;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -67,14 +85,14 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #ff0000;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
   font-size: 1.2rem;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
@@ -91,7 +109,7 @@ input[type="number"] {
   width: 100%;
   max-width: 300px;
   margin-bottom: 1rem;
-  border: 2px solid #333;
+  border: 2px solid #555151;
   border-radius: 4px;
 }
 
@@ -133,22 +151,15 @@ body {
 }
 
 h1 {
-    color: #3d3d3d;
+    color: #ff0000;
+    font-family: 'Algerian';
+    letter-spacing: 10px;
     text-align: center;
     padding: 20px 0;
     font-size: 2em;
     animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
 }
 
-#guess-form {
-    background: #fff;
-    margin: 20px auto;
-    padding: 30px;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 10px 10px 5px #aaaaaa;
-    animation: fadeIn 2s ease-in-out;
-}
 
 .button-container {
     display: flex;
